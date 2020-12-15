@@ -5,9 +5,16 @@ import add
 import sub
 import SinCosTan
 import log
+import exponent
 from Volumes import rectSolid
 from Volumes import cube
 from Volumes import cylinder
+from Volumes import prism
+from Volumes import sphere
+from Volumes import pyramid
+from Volumes import rcc
+from Volumes import recPyramid
+from Volumes import tetrahedron
 print(
     """What would you like to do today?
     1. Add
@@ -19,6 +26,7 @@ print(
     7. Tan
     8. Log
     9. Volumes of Shapes
+    00. Additional Features
     To choose what you would like, just type the number of the calculation!
     """
 )  #This is where the user will enter the statement that they want to calculate
@@ -58,9 +66,8 @@ if "9" in getInput:
     5. Sphere
     6. Pyramid
     7. Right Cylandrical Cone
-    8. Square
-    9. Ellipsoid
-    10. Tetrahedron 
+    8. Rectangular Pyramid
+    9. Tetrahedron 
     """)
     volInput = input()
     if "1" in volInput:
@@ -69,6 +76,27 @@ if "9" in getInput:
         cube.cube()
     if "3" in volInput:
         cylinder.cylinderCalc()
+    if "4" in volInput:
+        prism.prismCalc()
+    if "5" in volInput: 
+        sphere.sphereCalc()
+    if "6" in volInput: 
+        pyramid.pyrmaidCalc()
+    if "7" in volInput:
+        rcc.rccCalc()
+    if "8" in volInput: 
+        recPyramid.recPyrmaidCalc()
+    if "9" in volInput:
+        tetrahedron.tetraherdonCalc()
 
-elif getInput != "1" or "2" or "3" "4" or "5" or "6" or "7" or "8" or "9":
+elif getInput != "1" or "2" or "3" "4" or "5" or "6" or "7" or "8" or "9" or "10":
     print("Please make sure to enter the correct step!")
+
+if "00" in getInput:
+   print("""
+   Additional Features:
+   1. Exponent
+   """)
+   additionalInput = input()
+   if "1" in additionalInput:
+       exponent.exponent()
