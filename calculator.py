@@ -5,6 +5,9 @@ import add
 import sub
 import SinCosTan
 import log
+from Volumes import rectSolid
+from Volumes import cube
+from Volumes import cylinder
 print(
     """What would you like to do today?
     1. Add
@@ -15,6 +18,7 @@ print(
     6. Cos
     7. Tan
     8. Log
+    9. Volumes of Shapes
     To choose what you would like, just type the number of the calculation!
     """
 )  #This is where the user will enter the statement that they want to calculate
@@ -43,3 +47,28 @@ if "7" in getInput:
 
 if "8" in getInput: 
     log.log()
+
+if "9" in getInput:
+    print("""
+    Which volume would you like to calculate? 
+    1. Rectangular Solid
+    2. Cube
+    3. Cylinder
+    4. Prism
+    5. Sphere
+    6. Pyramid
+    7. Right Cylandrical Cone
+    8. Square
+    9. Ellipsoid
+    10. Tetrahedron 
+    """)
+    volInput = input()
+    if "1" in volInput:
+        rectSolid.calc()
+    if "2" in volInput: 
+        cube.cube()
+    if "3" in volInput:
+        cylinder.cylinderCalc()
+
+elif getInput != "1" or "2" or "3" "4" or "5" or "6" or "7" or "8" or "9":
+    print("Please make sure to enter the correct step!")
