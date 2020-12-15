@@ -5,7 +5,8 @@ import add
 import sub
 import SinCosTan
 import log
-import exponent
+from Misc import exponent
+from Misc import quadratic
 from Volumes import rectSolid
 from Volumes import cube
 from Volumes import cylinder
@@ -96,7 +97,10 @@ if "00" in getInput:
    print("""
    Additional Features:
    1. Exponent
+   2. Quadratic
    """)
    additionalInput = input()
    if "1" in additionalInput:
        exponent.exponent()
+   if "2" in additionalInput:
+    quadratic.quadraticCalc()
