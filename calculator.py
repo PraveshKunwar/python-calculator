@@ -7,6 +7,8 @@ import SinCosTan
 import log
 from Misc import exponent
 from Misc import quadratic
+from Misc import slope
+from Misc import interest
 from Volumes import rectSolid
 from Volumes import cube
 from Volumes import cylinder
@@ -98,9 +100,15 @@ if "00" in getInput:
    Additional Features:
    1. Exponent
    2. Quadratic
+   3. Slope/Equation/B intercept
+   4. Interest
    """)
    additionalInput = input()
    if "1" in additionalInput:
        exponent.exponent()
    if "2" in additionalInput:
     quadratic.quadraticCalc()
+   if "3" in additionalInput: 
+    slope.slopeCalc()
+   if "4" in additionalInput:
+       interest.interest()
