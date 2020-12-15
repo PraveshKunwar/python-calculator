@@ -1,6 +1,6 @@
 # Python Calculator
 
-FA simple calculator built-in Python!
+A simple calculator built-in Python!
 
 ## Installation
 
